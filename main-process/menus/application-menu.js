@@ -118,19 +118,14 @@ let template = [{
   submenu: [{
     label: 'Learn More',
     click: () => {
-      shell.openExternal('http://electron.atom.io')
+      shell.openExternal('http://www.browserstack.com')
     }
   }]
 }]
 
 function addUpdateMenuItems (items, position) {
   if (process.mas) return
-
-  const version = app.getVersion()
   let updateItems = [{
-    label: `Version ${version}`,
-    enabled: false
-  }, {
     label: 'Checking for Update',
     enabled: false,
     key: 'checkingForUpdate'
@@ -172,31 +167,21 @@ function findReopenMenuItem () {
 }
 
 if (process.platform === 'darwin') {
-  const name = app.getName()
+  const name = 'BrowserStack'
   template.unshift({
-    label: name,
+    label: 'BrowserStack',
     submenu: [{
       label: `About ${name}`,
-      role: 'about'
-    }, {
-      type: 'separator'
-    }, {
-      label: 'Services',
-      role: 'services',
-      submenu: []
+      role: 'help',
+      click: () => {
+        shell.openExternal('http://www.browserstack.com')
+      }
     }, {
       type: 'separator'
     }, {
       label: `Hide ${name}`,
       accelerator: 'Command+H',
       role: 'hide'
-    }, {
-      label: 'Hide Others',
-      accelerator: 'Command+Alt+H',
-      role: 'hideothers'
-    }, {
-      label: 'Show All',
-      role: 'unhide'
     }, {
       type: 'separator'
     }, {
