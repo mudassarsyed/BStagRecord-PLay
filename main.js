@@ -1,10 +1,11 @@
 require('update-electron-app')({
   logger: require('electron-log')
 })
-
+var cmd =require('node-cmd');
 const path = require('path')
 const glob = require('glob')
 const {app, BrowserWindow} = require('electron')
+const {ipcMain} = require('electron')
 
 const debug = /--debug/.test(process.argv[2])
 
@@ -91,3 +92,8 @@ function loadDemos () {
 }
 
 initialize()
+
+ipcMain.on('execute', (event, arg) => {
+  cmd.run(arg);
+  event.returnValue = "started"
+})

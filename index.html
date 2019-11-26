@@ -27,27 +27,34 @@
   <link rel="import" href="sections/system/clipboard.html">
   <link rel="import" href="sections/system/protocol-handler.html">
   <link rel="import" href="sections/media/desktop-capturer.html">
-  <title>BrowserStack Record and Play</title>
+  <title>BrowserStack Native</title>
 </head>
 <body>
 
   <nav class="nav js-nav">
     <header class="nav-header">
-      <h1 class="nav-title">BrowserStack <strong>Record and Play</strong></h1>
+      <h1 class="nav-title">BrowserStack <strong>Native</strong></h1>
       <svg class="nav-header-icon"><use xlink:href="assets/img/icons.svg#icon-electron"></use></svg>
     </header>
 
     <div class="nav-item u-category-native-ui">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-native-ui"></use></svg>
-        Run on BrowserStack</h5>
+        Record and Playback</h5>
+        <button type="button" id="button-about" data-modal="about" class="nav-button">Overview</button>
       <button type="button" id="button-ex-links-file-manager" data-section="ex-links-file-manager" class="nav-button">BrowserStack Details</button>
     </div>
     <div class="nav-item u-category-native-ui">
       <h5 class="nav-category">
         <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-native-ui"></use></svg>
-        Start BrowserStack Local</h5>
-      <button type="button" id="button-ex-links-file-manager" data-section="ex-links-file-manager" class="nav-button">BrowserStack Details</button>
+        BrowserStack Local</h5>
+      <button type="button" id="button-ex-links-file-manager" data-section="ex-links-file-manager" class="nav-button">Start Local</button>
+    </div>
+    <div class="nav-item u-category-native-ui">
+      <h5 class="nav-category">
+        <svg class="nav-icon"><use xlink:href="assets/img/icons.svg#icon-native-ui"></use></svg>
+        Manage Apps</h5>
+      <button type="button" id="button-ex-links-file-manager" data-section="ex-links-file-manager" class="nav-button">Upload Apps</button>
     </div>
     <footer class="nav-footer">
       <button type="button" id="button-about" data-modal="about" class="nav-footer-button">About</button>

@@ -13,33 +13,41 @@
         <br>
   
         <form id='parameters'>
-        Username:<input type="text" name="username" value="mudassarsyed2"><br><br>
-        Accesskey:<input type="password" name="accesskey" value="8ZezGR6GyZjP2ZqrXphh"><br><br>
-        Select a .side file: <input type="file" name="myFile" id="myFile"><br><br>
-        <input type="checkbox" name="local" value="true" checked>Local Testing &nbsp;&nbsp;
-        <input type="checkbox" name="mobile" value="true" >Mobile<br><br>
-        Operating System: <select name="os">
-          <option value="windows">windows</option>
-          <option value="mac">mac</option>
+        Username:<input type="text" id="username" value="mudassarsyed2"><br><br>
+        Accesskey:<input type="password" id="accesskey" ><br><br>
+        Select a .side file: <input type="file" id="myFile"><br><br>
+        <input type="checkbox" id="local" value="true" checked>Local Testing &nbsp;&nbsp;
+        <input type="checkbox" id="mobile" value="true" >Mobile<br><br>
+        Operating System: <select id="os">
+          <option value="WIN8">WIN8</option>
+          <option value="MAC">MAC</option>
+          <option value="XP">XP</option>
         </select>&nbsp;&nbsp;
-        os_version <select name="os_version">
-          <option value="7">7</option>
-          <option value="8">8</option>
-        </select><br><br>
-        Browser: <select name="browser">
+        Browser: <select id="browser">
           <option value="firefox">firefox</option>
           <option value="chrome">chrome</option>
+          <option value="internet explorer">internet explorer</option>
+          <option value="safari">safari</option>
+          <option value="edge">edge</option>
         </select>&nbsp;&nbsp;
-        browser_version <select name="browser_version">
+        browser_version <select id="browser_version">
+          <option value="60">60</option>
+          <option value="61">61</option>
+          <option value="62">62</option>
+          <option value="63">63</option>
+          <option value="64">64</option>
+          <option value="65">65</option>
           <option value="66">66</option>
           <option value="67">67</option>
+          <option value="68">68</option>
+          <option value="69">69</option>
         </select>
         <br>
         <br>
         Other capabilities(optional)<br>
-        <textarea name="message" style="width:400px; height:100px;">build='Selenium_IDE' name='Selenium_IDE_test'</textarea>
+        <textarea id="other" style="width:400px; height:100px;">build='Selenium_IDE' name='Selenium_IDE_test'</textarea>
           <br>
-        <input type="submit" value="Run on BrowserStack">
+        <input id='run-on-bs' type="button" value="Run on BrowserStack">
         </form>
       </div>
     </header>
@@ -47,8 +55,7 @@
     
 
     <script type="text/javascript">
-      require('./renderer-process/native-ui/ex-links-file-manager/file-manager')
-      require('./renderer-process/native-ui/ex-links-file-manager/ex-links')
+      require('./renderer-process/native-ui/ex-links-file-manager/run-side-runner')
     </script>
 
   </section>
