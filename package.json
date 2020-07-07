@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "child_process": "^1.0.2",
-    "electron": "^5.0.1",
+    "electron": "^7.2.4",
     "electron-log": "^2.2.14",
     "electron-settings": "^3.0.7",
     "electron-shortcut-normalizer": "^1.0.0",
